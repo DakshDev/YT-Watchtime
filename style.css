@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 16px;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+svg path{
+    fill: #fff;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    background: #777;
+    display: grid;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 40px 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.container .main > h1{
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+    .container .main > h1{
+        font-size: 35px;
+    } 
+}
+@media screen and (max-width: 515px) {
+    .container .main > h1{
+        font-size: 30px !important;
+    } 
+}
+@media screen and (max-width: 455px) {
+    .container .main > h1{
+        font-size: 25px !important;
+    } 
+}
+.container > button{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2ecc71;
+    outline: none;
+    border: none;
+    position: fixed;
+    z-index: 99;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.container > button > svg{
+    transform: rotateX(0deg);
+    transition: transform 0.2s;
+}
+.container > button:active{
+    background: #27ae60;
+}
+.main{
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #666;
+    transition: top 0.3s;
+}
+.main > form{
+    display: grid;
+    align-items: center;
+    align-content: center;
+    grid-gap: 5px 0px;
+    max-width: 400px;
+    margin: auto;
+}
+.main > form input{
+    padding: 7px 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    color: #000;
+    border-radius: 2px;
+}
+.main > form > span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px 5px;
+}
+.main > form input[type="submit"]{
+    background: #2ecc71;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+}
+.main > form input[type="submit"]:active{
+    background: #27ae60;
+}
+.main > form button{
+    padding: 7px 10px;
+    outline: none;
+    border: none;
+    color: #000;
+    border-radius: 2px;
+    background: #dcdde1;
+    font-weight: bold;
+    cursor: pointer;
+}
+.main > form button:active{
+    background: #f5f6fa;
+}
+.errorMsgClr{
+    color: #ff7979 !important;
+    animation-name: animi;
+    animation-duration: 0.1s;
+    animation-iteration-count:5;
+    animation-direction:alternate-reverse;
+}
+@keyframes animi{
+    0%{transform: translateX(-20px)};
+    25%{transform: translateX(20px)};
+    50%{transform: translateX(-20px)};
+    75%{transform: translateX(20px)};
+    100%{transform: translateX(-20px)};
+}
+.videoBox{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    justify-content: center;
+}
+.videoBox > iframe{
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid white;
+}
+.info{
+    width: 100%;
+    padding: 5px 10px;
+    background: #bdc3c7;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#author{
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(70, 70, 70);
+}
+#author > span{
+    color: rgb(5, 15, 59);
+    font-size: 18px;
+    font-weight: 800;
+}
+.info > span{
+    padding: 5px 10px;
+    background: #ff6b81;
+    text-align: center;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+.info > span:active{
+    background: #ff4757;
+}
+.helpBox{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    background: #5555552f;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    display: none;
+    transition: opacity 0.2s;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.innerHelpBox{
+    padding: 20px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background: #dfe4ea;
+    cursor: default;
+    overflow-x: auto;
+}
+.innerHelpBox > h1{
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.innerHelpBox > span{
+    display: grid;
+    align-items: center;
+    align-content: center;
+    grid-gap: 15px 0px;
+}
+.innerHelpBox > span div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0px 5px;
+}
+.innerHelpBox > span div .steps{
+    color: #444;
+    font-weight: bold;
+}
+.innerHelpBox > span div .guid{
+    width: 100%;
+    color: #444;
+    text-align: justify;
+}
+@media screen and (max-width:768px) {
+    .innerHelpBox{
+        padding: 20px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 60vw;
+    }  
+.innerHelpBox > h1{
+    font-size: 18px;
+}
+}
+@media screen and (max-height:500px) {
+    .innerHelpBox{
+        top: 10px;
+        transform: translate(-50%, 10px);
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Youtube Views Increaser</title>
+</head>
+<body>
+    <div class="container">
+        <button>
+            <svg height="16" width="14" viewBox="0 0 448 512"><path d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"/></svg>
+        </button>
+        <div class="main">
+            <h1>Youtube Views Increaser</h1>
+            <form>
+                <input type="text" class="url" name="txt" placeholder="Enter your YT video (URL)" value="">
+                <input type="number" class="num" name="num" placeholder="Enter how many video plays" value="5" min="1">
+                <span>
+                    <input type="submit" class="submit" name="subBtn" value="Start">
+                    <button id="reloadBtn">Reset</button>
+                </span>
+            </form>
+        </div>
+        <div class="videoBox"></div>
+        <div class="info">
+            <p id="author"><span>Author:</span> Daksh Kishore</p>
+            <span id="helpBtn">Help?</span>
+        </div>
+        <div class="helpBox">
+            <div class="innerHelpBox">
+                <h1>How to use?</h1>
+                <span>
+                    <div><span class="steps">Step&nbsp;1</span> <span class="guid">You need to write the url of your video in the Url field.</span> </div>
+                    <div><span class="steps">Step&nbsp;2</span> <span class="guid">After writing the url, you need to enter a number in the Number field representing how many times you want the video to be played.</span> </div>
+                    <div><span class="steps">Step&nbsp;3</span> <span class="guid">After that, you have to click the Start button.</span> </div>
+                    <div><span class="steps">Step&nbsp;4</span> <span class="guid">Finally, play the video and let it run, and your views will increase.</span> </div>
+                </span>
+            </div>
+        </div>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
